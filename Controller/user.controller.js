@@ -339,15 +339,15 @@ const SendEmail = asyncHandler( async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "gagadeep7346@gmail.com",
-      pass: "oulu bdxi ffjo hsui",    
+      user: "sanjeevbookmaker@gmail.com",
+      pass: "pupt qhvz ojbk mloc",    
     },
   });
 
   // Email options
   const mailOptions = {
     from: email,
-    to: "gagadeep7346@gmail.com", // Your email
+    to: "sanjeevbookmaker@gmail.com", // Your email
     subject: `Contact Form Submission from ${name}`,
     html: `
     <h3>New Contact Form Submission</h3>
