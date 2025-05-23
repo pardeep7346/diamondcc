@@ -2,22 +2,22 @@ import mongoose, { Schema } from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
-const userSchema = new Schema(
+const userSchema = new Schema(    
   {
-    fullName: {
+    fullName: {     
       type: String,
       required: true,
       trim: true,
-      index: true,
+      index: true,  
     },
     email: {
       type: String,
-      required: true,
+      required: true,  
       unique: true,
       lowecase: true,
       trim: true,
     },
-    password: {
+    password: { 
       type: String,
       required: [true, "Password is required"],
     },
@@ -59,7 +59,7 @@ userSchema.methods.generateAccessToken = function () {
     },
     process.env.ACCESS_TOKEN_SECRET,
     {
-      expiresIn: process.env.ACCESS_TOKEN_EXPIRY,
+      expiresIn: process.env.ACCESS_TOKEN_EXPIRY, 
     }
   );
 };
